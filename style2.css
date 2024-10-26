@@ -1,0 +1,97 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.toggleBtn{
+    position: absolute;
+    top: 17px;
+   
+    right: 650px;
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes rotation{
+    from{
+        --angle:0deg;
+    }
+    to{
+        --angle:360deg;
+    }
+}
+
+.container{
+    border: 2px solid yellowgreen;
+    width: 40%;
+    height: auto;
+    padding: 4rem 1.5rem;
+    color: hsl(177.23deg 96.61% 47.66%);
+    animation: rotation 3s linear infinite;
+    background:linear-gradient(var(--angle),transparent 0%,pink,red,blue,green,pink);
+
+    box-shadow: 0 0 5px yellowgreen;
+
+    border-radius: 1rem;
+}
+
+.btn{
+    background-color: cadetblue;
+    padding: .5rem;
+    border-radius: .5rem;
+    outline: none;
+
+    box-shadow: 0 0 10px hsl(182, 25%, 50%);
+    border-color: hsl(182, 35%, 50%);
+}
+
+.btn:hover{
+    background-color: hsl(182, 25%, 40%);
+
+}
+
+
+.display{
+    width: 100%;
+    height: auto;
+    position: relative;
+    /* right: 2px;
+    bottom: 20px; */
+    margin: 4rem 1rem;
+    font-weight: 700;
+   
+    padding: 1rem;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+h1{
+    margin: 1rem;
+    color: brown;
+}
+.dark-mode{
+    background-color: black;
+}
+
+.light-mode{
+    background-color: white;
+}
+
